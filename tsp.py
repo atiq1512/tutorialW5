@@ -78,7 +78,7 @@ def dist_two_cities(city_1, city_2):
     city_1_coords = city_coords[city_1]
     city_2_coords = city_coords[city_2]
     return np.sqrt(np.sum((np.array(city_1_coords) - np.array(city_2_coords))**2))
-  def total_dist_individual(individual):
+def total_dist_individual(individual):
 
     total_dist = 0
     for i in range(0, len(individual)):
@@ -165,7 +165,7 @@ def mutation(offspring):
     offspring[index_1] = offspring[index_2]
     offspring[index_2] = temp
     return(offspring)
-  def run_ga(cities_names, n_population, n_generations, crossover_per, mutation_per):
+def run_ga(cities_names, n_population, n_generations, crossover_per, mutation_per):
 
     population = initial_population(cities_names, n_population)
     fitness_probs = fitness_prob(population)
